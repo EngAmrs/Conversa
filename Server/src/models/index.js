@@ -1,1 +1,5 @@
-//this file is optional and usually ORM dependent if an ORM is used.
+import User from './User';
+
+export {
+  User,
+};
