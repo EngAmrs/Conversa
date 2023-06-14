@@ -19,6 +19,11 @@ const userSchema = new Schema(
       maxLength: 30,
       trim: true
     },
+    pic: {
+      type: String,
+      required: true,
+      default: 'https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o='
+    },
     email: {
       type: String,
       unique: true,
@@ -26,12 +31,6 @@ const userSchema = new Schema(
       maxLength: 100,
       trim: true
     },
-    isAdmin: {
-        type: Boolean,
-        required: true,
-        default: false,
-        trim: true
-      },
     phone: {
       type: String,
       required: true,
@@ -56,6 +55,9 @@ const userSchema = new Schema(
       },
     },
   },
+  {
+    timestamps: true
+  }
 );
 
 const User = mongoose.model('User', userSchema);

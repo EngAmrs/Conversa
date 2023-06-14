@@ -1,7 +1,10 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv')
 // const routes = require('./routes');
+
+dotenv.config();
 
 const app = express();
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/Chat';
